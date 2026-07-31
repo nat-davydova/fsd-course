@@ -1,31 +1,38 @@
 import { createBrowserRouter } from 'react-router'
 
+import { ArticlePage } from '../../pages/article/'
+import { CategoryPage } from '../../pages/category'
+import { CommunityPage } from '../../pages/community'
+import { MainPage } from '../../pages/main'
+import { EditUserPage } from '../../pages/user/edit'
+import { UserPage } from '../../pages/user/profile'
+
 export const router = createBrowserRouter([
   {
     path: '/',
-    element: <div>Home</div>,
+    Component: MainPage,
   },
 
   {
     path: '/community',
-    element: <div>Community</div>,
+    Component: CommunityPage,
   },
 
   {
     path: '/:alias',
-    element: <div>Category</div>,
+    Component: CategoryPage,
   },
 
   {
     path: '/article',
-    children: [{ path: ':alias', element: <div>Article</div> }],
+    children: [{ path: ':alias', Component: ArticlePage }],
   },
 
   {
-    path: '/profile',
+    path: '/user',
     children: [
-      { index: true, element: <div>Profile</div> },
-      { path: 'edit', element: <div>Edit Profile</div> },
+      { index: true, Component: UserPage },
+      { path: 'edit', Component: EditUserPage },
     ],
   },
 ])

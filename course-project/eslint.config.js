@@ -46,6 +46,14 @@ export default defineConfig([
           prefer: 'type-imports',
         },
       ],
+      'simple-import-sort/exports': 'error',
+      'simple-import-sort/imports': 'error',
+    },
+  },
+  {
+    files: ['**/*.{ts,tsx}'],
+    ignores: ['**/index.{ts,tsx}'],
+    rules: {
       'no-restricted-imports': [
         'error',
         {
@@ -58,8 +66,6 @@ export default defineConfig([
           ],
         },
       ],
-      'simple-import-sort/exports': 'error',
-      'simple-import-sort/imports': 'error',
     },
   },
   {
