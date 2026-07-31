@@ -1,0 +1,21 @@
+:root {
+    --color-dominant-main: #ffffff;
+    --color-dominant-dop: #f6f8fc;
+
+    --color-content-dark: #373737;
+    --color-content-medium: #787a7c;
+    --color-content-light: #dddfe1;
+
+    --color-blue-dark: #0f52c2;
+    --color-blue-medium: #1f74e7;
+    --color-blue-light: #6399f6;
+
+    --color-orange: #f16600;
+
+    --color-red-light: #f0776c;
+    --color-red: #ea4335;
+
+
+    --color-green-light: #53cc93;
+    --color-green: #21ba72;
+}

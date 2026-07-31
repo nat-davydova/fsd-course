@@ -1,5 +1,6 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@import 'modern-normalize/modern-normalize.css';
+@import "variables.css";
+
+body {
+  font-family: Inter, sans-serif;
 }
