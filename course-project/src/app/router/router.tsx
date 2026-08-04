@@ -6,11 +6,12 @@ import { CommunityPage } from '../../pages/community'
 import { MainPage } from '../../pages/main'
 import { EditUserPage } from '../../pages/user/edit'
 import { UserPage } from '../../pages/user/profile'
+import { ROUTES } from '../../shared/routes'
 import { Layout } from '../layout'
 
 export const router = createBrowserRouter([
   {
-    path: '/',
+    path: ROUTES.main,
     Component: Layout,
     children: [
       {
@@ -18,28 +19,28 @@ export const router = createBrowserRouter([
         Component: MainPage,
       },
       {
-        path: 'community',
+        path: ROUTES.community,
         Component: CommunityPage,
       },
       {
-        path: 'article/:alias',
+        path: ROUTES.article(':alias'),
         Component: ArticlePage,
       },
       {
-        path: 'user',
+        path: ROUTES.user.index,
         children: [
           {
             index: true,
             Component: UserPage,
           },
           {
-            path: 'edit',
+            path: ROUTES.user.edit,
             Component: EditUserPage,
           },
         ],
       },
       {
-        path: ':alias',
+        path: ROUTES.category(':alias'),
         Component: CategoryPage,
       },
     ],
