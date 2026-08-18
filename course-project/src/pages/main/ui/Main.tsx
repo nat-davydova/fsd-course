@@ -1,6 +1,6 @@
 import { Link } from 'react-router'
 
-import { ROUTES } from '../../../shared/routes'
+import { ROUTES } from '../../../shared'
 
 export const MainPage = () => {
   return (

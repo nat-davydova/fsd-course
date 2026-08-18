@@ -6,7 +6,7 @@ import { CommunityPage } from '../../pages/community'
 import { MainPage } from '../../pages/main'
 import { EditUserPage } from '../../pages/user/edit'
 import { UserPage } from '../../pages/user/profile'
-import { ROUTES } from '../../shared/routes'
+import { ROUTES } from '../../shared'
 import { Layout } from '../layout'
 
 export const router = createBrowserRouter([
